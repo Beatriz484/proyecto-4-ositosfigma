@@ -1,101 +1,13 @@
-/* --- Estilos Base del Cuerpo --- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 40px;
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+background-color: #f0f0f0;
+img  {
+  max-width: 100%;
+  height: auto;
 }
-
-/* Texto lateral vertical izquierdo */
-.sidebar-text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #000000;
-    white-space: nowrap;
+ <div class="grid-item item-title":1>
+        width: 50%;
+div class="grid-item item-img1":2  width="50%" height="300" alt="Power Bear">
 }
-
-/* --- CONTENEDOR GRID PRINCIPAL --- */
-.grid-container {
-    display: grid;
-    /* Definimos 3 columnas adaptables */
-    grid-template-columns: repeat(3, 1fr); 
-    /* Separación entre las tarjetas */
-    gap: 15px; 
-    max-width: 900px;
-    width: 100%;
-
-    /* Dibujamos el diseño exacto de la captura de Figma */
-    grid-template-areas: 
-        "titulo   banner1  banner1"
-        "img2     img3     principal"
-        "banner2  banner2  principal"
-        "img4     img5     img6"
-        "img7     img8     banner3";
-}
-
-/* --- Estilo de los Ítems del Grid --- */
-.grid-item {
-    border: 1px solid #ccc; /* Bordes grises finos como en Figma */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #fff;
-}
-
-/* Control total de las imágenes para que no se deformen */
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Se adaptan perfectamente al contenedor */
-}
-
-/* --- ASIGNACIÓN DE ÁREAS --- */
-
-.item-title { 
-    grid-area: titulo; 
-    padding: 20px;
-    text-align: center;
-}
-.item-title h1 {
-    font-size: 1.6rem;
-    margin: 0;
-    font-weight: normal;
-}
-
-/* Imágenes especiales (Banners y Principal) */
-.item-img1 { grid-area: banner1; 
-} /* Banner superior derecho */
-.item-main-img { grid-area: principal; 
-} /* Imagen vertical grande */
-.item-img5 { grid-area: banner2;
- } /* Banner intermedio izquierdo url(rainbown-bear.png) */
-.item-img9 { grid-area: banner3; 
-} /* Banner inferior derecho url(love-all-bear.png) */
-
-/* Ositos individuales pequeños */
-.item-img2 { grid-area: img2; 
-} 
-/*url(purple-bear.png)  */
-.item-img3 { grid-area: img3;
- } 
-/* url(green-funko-bear.png) */
-.item-img4 { grid-area: img4; 
-} 
-/* url(yellow-funko bear.png) */
-.item-img6 { grid-area: img6;
- } 
-/* url(blue-funko-bear.png) */
-.item-img7 { grid-area: img7; 
-}
-/* url(dream-bear.png) */
-.item-img8 { grid-area: img8;
- } 
-/*url(pink-bear.png) */
-
-
