@@ -89,3 +89,4 @@ body {
 /* Fila 4: El banner alargado inferior derecho */
 .item-img9 {
     grid-column: span 2; /* Ocupa las columnas 3 y 4 en la cuarta fila */
+    
