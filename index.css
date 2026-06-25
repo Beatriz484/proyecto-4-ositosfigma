@@ -1,13 +1,91 @@
+/* Estilos generales de la página */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-background-color: #f0f0f0;
-img  {
-  max-width: 100%;
-  height: auto;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
 }
- <div class="grid-item item-title":1>
-        width: 50%;
-div class="grid-item item-img1":2  width="50%" height="300" alt="Power Bear">
+
+/* Contenedor exterior para alinear el texto lateral y el grid */
+.page-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
+
+/* Texto vertical del lateral izquierdo */
+.sidebar-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* --- CONFIGURACIÓN DEL GRID --- */
+.grid-container {
+    display: grid;
+    /* Creamos 4 columnas del mismo tamaño (puedes ajustar los px si lo deseas) */
+    grid-template-columns: repeat(4, 140px);
+    /* Definimos el tamaño base de las filas */
+    grid-auto-rows: minmax(140px, auto);
+    gap: 15px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Comportamiento base de los elementos e imágenes */
+.grid-item {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que las imágenes se estiren o distorsionen */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* --- POSICIONAMIENTO ESPECÍFICO --- */
+
+/* Fila 1: Título de 'Care Bears' */
+.item-title {
+    grid-column: span 2; /* Ocupa las columnas 1 y 2 */
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 100%;
+}
+
+.item-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+/* Fila 1: Banner superior derecho */
+.item-img1 {
+    grid-column: span 2; /* Ocupa las columnas 3 y 4 */
+}
+
+/* Imagen grande central (Póster de Care Bears) */
+.item-main-img {
+    grid-column: 3;      /* Se coloca fijamente en la columna 3 */
+    grid-row: span 2;    /* Se estira verticalmente cubriendo 2 filas (Fila 2 y Fila 3) */
+}
+
+/* Fila 3: El banner alargado de la izquierda */
+.item-img5 {
+    grid-column: span 2; /* Ocupa las columnas 1 y 2 en la tercera fila */
+}
+
+/* Fila 4: El banner alargado inferior derecho */
+.item-img9 {
+    grid-column: span 2; /* Ocupa las columnas 3 y 4 en la cuarta fila */
