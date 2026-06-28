@@ -1,92 +1,68 @@
-/* Estilos generales de la página */
+*, *::before, *::after {
+box-sizing: border-box;
+}
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 40px;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
+background-color: lightgray;
 }
-
-/* Contenedor exterior para alinear el texto lateral y el grid */
-.page-layout {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+main {
+display: flex;
+justify-content: center;
+align-items: center;
 }
-
-/* Texto vertical del lateral izquierdo */
-.sidebar-text {
-    writing-mode: vertical-lr;
-    transform: rotate(180deg);
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    white-space: nowrap;
+.gallery {
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: repeat(4, 1fr);
+gap: 10px;
+width: 70vw;
+margin-top: 30px;
+margin-bottom: 30px;
 }
-
-/* --- CONFIGURACIÓN DEL GRID --- */
-.grid-container {
-    display: grid;
-    /* Creamos 4 columnas del mismo tamaño (puedes ajustar los px si lo deseas) */
-    grid-template-columns: repeat(4, 140px);
-    /* Definimos el tamaño base de las filas */
-    grid-auto-rows: minmax(140px, auto);
-    gap: 15px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+.gallery img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+min-width: 0;
+min-height: 0;
+border-radius: 20px;
+border: 1px solid black;
 }
-
-/* Comportamiento base de los elementos e imágenes */
-.grid-item {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.gridTitle {
+grid-area: 1/1/2/6;
+border: 1px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 20px;
 }
-
-.grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Evita que las imágenes se estiren o distorsionen */
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.gridImg1 {
+grid-area: 1/6/2/11;
 }
-
-/* --- POSICIONAMIENTO ESPECÍFICO --- */
-
-/* Fila 1: Título de 'Care Bears' */
-.item-title {
-    grid-column: span 2; /* Ocupa las columnas 1 y 2 */
-    border: 1px solid #333;
-    border-radius: 4px;
-    height: 100%;
+.gridImg2 {
+grid-area: 2/1/3/3;
 }
-
-.item-title h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #000;
+.gridImg3 {
+grid-area: 2/3/3/5; 
 }
-
-/* Fila 1: Banner superior derecho */
-.item-img1 {
-    grid-column: span 2; /* Ocupa las columnas 3 y 4 */
+.gridImg4 {
+grid-area: 2/5/4/9;
 }
-
-/* Imagen grande central (Póster de Care Bears) */
-.item-main-img {
-    grid-column: 3;      /* Se coloca fijamente en la columna 3 */
-    grid-row: span 2;    /* Se estira verticalmente cubriendo 2 filas (Fila 2 y Fila 3) */
+.gridImg5 {
+grid-area: 2/9/3/11;
 }
-
-/* Fila 3: El banner alargado de la izquierda */
-.item-img5 {
-    grid-column: span 2; /* Ocupa las columnas 1 y 2 en la tercera fila */
+.gridImg6 {
+grid-area: 3/1/4/5;
 }
-
-/* Fila 4: El banner alargado inferior derecho */
-.item-img9 {
-    grid-column: span 2; /* Ocupa las columnas 3 y 4 en la cuarta fila */
-    
+.gridImg7 {
+grid-area: 3/9/4/11;
+}
+.gridImg8 {
+grid-area: 4/1/5/3;
+}
+.gridImg9 {
+grid-area: 4/3/5/5;
+}
+.gridImg10 {
+grid-area: 4/5/5/11;
+}
